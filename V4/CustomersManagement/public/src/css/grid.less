@@ -1,0 +1,27 @@
+.gridStyle {
+	border: 1px solid @grey;
+	width: 100%;
+	min-width: 100px;
+	height: 300px;
+}
+.gridCell {
+	/* background-color: @aqua; */
+	color: @black;
+	border-bottom: 1px solid @black;
+}
+.gridHeader {
+	background-color: @tableHeaderBackgroundColour;
+	color: @black;
+	border-bottom: 1px solid @black;	
+	font-weight: bold;
+}
+
+.ngRow.odd {
+	background-color: none;
+}
+.ngRow.odd {
+	background-color: @tableRowOddBackgroundColour !important;
+}
+.ngRow.even {
+	background-color: @tableRowEvenBackgroundColour !important;
+}
