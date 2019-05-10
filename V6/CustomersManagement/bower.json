@@ -1,0 +1,23 @@
+{
+  "name": "MEAN-Customers",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "~1.2",
+    "angular-ui-router": "~0.2.10",
+    "restangular": "~1.4.0",
+    "lodash": "latest",
+    "moment": "~2.7.0",
+    "socket.io-client": "1.0.6",
+    "ng-grid": "~2.0.11",
+    "angular-mocks": "~1.2.21"
+  },
+  "resolutions": {
+    "angular": "1.2.20"
+  },
+  "devDependencies": {
+    "angular-xeditable": "~0.1.8"
+  }
+}

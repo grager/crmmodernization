@@ -1,0 +1,43 @@
+/* Vars */
+
+/* general colours */
+@blue: #608BBA;
+@darkBlue: #4F6073;
+@aqua: #93EDEC;
+@beige: #EDBEB0;
+@brown: #BA453C;
+
+@blue2: #068587;
+@darkBlue2: #112F41;
+@green: #6FB07F;
+@yellow: #FCB03C;
+@red: #FC5B3F;
+
+@black: #333;
+@grey: #bbb;
+@white: #eee;
+
+/* table ng-grid style */
+@tableHeaderBackgroundColour: @grey;
+@tableRowOddBackgroundColour: #eee;
+@tableRowEvenBackgroundColour: #ddd;
+
+@background-image: url('../../img/bg2.png');
+@background-color: @blue2;
+
+/* Mixins */
+.background {
+	background-image: @background-image;
+	background-color: @background-color;
+}
+
+.font {
+	font-family: 'Roboto', sans-serif;
+	color: @black;
+}
+
+.roundBorders {
+  border-radius: 3px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;	
+}
