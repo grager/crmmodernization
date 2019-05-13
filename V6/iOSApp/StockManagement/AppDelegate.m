@@ -11,6 +11,7 @@
 #import "SupplierModel.h"
 #import "StockModel.h"
 #import "CustomerModel.h"
+#import <AWSCognitoAuth/AWSCognitoAuth.h>
 
 @interface AppDelegate ()
 
@@ -54,6 +55,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    return [[AWSCognitoAuth defaultCognitoAuth] application:app openURL:url options:options];
 }
 
 

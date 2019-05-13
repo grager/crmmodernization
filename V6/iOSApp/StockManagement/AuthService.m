@@ -7,7 +7,6 @@
 //
 
 #import "AuthService.h"
-#import "Jwt.h"
 
 @implementation AuthService
 
@@ -18,31 +17,13 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[[self class] alloc] init];
     });
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newTokenReceived:) name:@"SigninCompleted" object:nil];
-    
+        
     return sharedInstance;
 }
 
 - (BOOL) isAuthenticated
 {
-    NSError *error;
-    
-    if([Jwt decodeWithToken:self.currentJwtToken andKey:@"thekey" andVerify:YES andError:&error])
-    {
-        if(!error)
-        {
-            return YES;
-        }
-        return NO;
-    }
-
-    return NO;
-}
-
-- (void) newTokenReceived:(NSNotification*)aNotifiction
-{
-    self.currentJwtToken = aNotifiction.object[@"jwtToken"];
+    return (self.session != nil);
 }
 
 @end

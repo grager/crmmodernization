@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		45180C4C2278A7F000450AB1 /* AuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 45180C4B2278A7F000450AB1 /* AuthService.m */; };
-		45180C622278AB1100450AB1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 45180C4E2278AB1100450AB1 /* LICENSE */; };
-		45180C672278AB1100450AB1 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 45180C5A2278AB1100450AB1 /* Algorithm.m */; };
-		45180C682278AB1100450AB1 /* Jwt.m in Sources */ = {isa = PBXBuildFile; fileRef = 45180C5B2278AB1100450AB1 /* Jwt.m */; };
+		45180C6B2285DBAE00450AB1 /* AWSCognitoAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45180C6A2285DBAE00450AB1 /* AWSCognitoAuth.framework */; };
+		45180C6E2285DE5A00450AB1 /* AWSCognitoAuth.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 45180C6A2285DBAE00450AB1 /* AWSCognitoAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		455EAAB721E2A66000866AA2 /* CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EAAAF21E2A65F00866AA2 /* CustomerViewController.m */; };
 		455EAAB821E2A66000866AA2 /* CustomerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EAAB021E2A65F00866AA2 /* CustomerModel.m */; };
 		455EAAB921E2A66000866AA2 /* CustomerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EAAB321E2A65F00866AA2 /* CustomerService.m */; };
@@ -33,36 +32,23 @@
 		45B99E961FB3728D00C940A4 /* StockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B99E931FB3728D00C940A4 /* StockData.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		45180C5E2278AB1100450AB1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45180C4F2278AB1100450AB1 /* objective-c-jwt.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D83ECD881AA5992D0037E00C;
-			remoteInfo = "objective-c-jwt";
+/* Begin PBXCopyFilesBuildPhase section */
+		45180C6D2285DE4700450AB1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45180C6E2285DE5A00450AB1 /* AWSCognitoAuth.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45180C602278AB1100450AB1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45180C4F2278AB1100450AB1 /* objective-c-jwt.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D83ECD9C1AA5E1830037E00C;
-			remoteInfo = "objective-c-jwt-test";
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		45180C4A2278A7F000450AB1 /* AuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
 		45180C4B2278A7F000450AB1 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
-		45180C4E2278AB1100450AB1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		45180C4F2278AB1100450AB1 /* objective-c-jwt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "objective-c-jwt.xcodeproj"; sourceTree = "<group>"; };
-		45180C522278AB1100450AB1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		45180C542278AB1100450AB1 /* JwtUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JwtUnitTest.m; sourceTree = "<group>"; };
-		45180C552278AB1100450AB1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45180C562278AB1100450AB1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		45180C582278AB1100450AB1 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
-		45180C592278AB1100450AB1 /* Jwt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jwt.h; sourceTree = "<group>"; };
-		45180C5A2278AB1100450AB1 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
-		45180C5B2278AB1100450AB1 /* Jwt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jwt.m; sourceTree = "<group>"; };
+		45180C6A2285DBAE00450AB1 /* AWSCognitoAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoAuth.framework; path = "../../aws-ios-sdk-2.9.8/frameworks/AWSCognitoAuth.framework"; sourceTree = "<group>"; };
 		455EAAAF21E2A65F00866AA2 /* CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerViewController.m; sourceTree = "<group>"; };
 		455EAAB021E2A65F00866AA2 /* CustomerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerModel.m; sourceTree = "<group>"; };
 		455EAAB121E2A65F00866AA2 /* CustomerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerModel.h; sourceTree = "<group>"; };
@@ -108,54 +94,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45180C6B2285DBAE00450AB1 /* AWSCognitoAuth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45180C4D2278AB1100450AB1 /* objective-c-jwt-simple-master */ = {
-			isa = PBXGroup;
-			children = (
-				45180C4E2278AB1100450AB1 /* LICENSE */,
-				45180C4F2278AB1100450AB1 /* objective-c-jwt.xcodeproj */,
-				45180C522278AB1100450AB1 /* README.md */,
-				45180C532278AB1100450AB1 /* objective-c-jwt-test */,
-				45180C562278AB1100450AB1 /* .gitignore */,
-				45180C572278AB1100450AB1 /* objective-c-jwt */,
-			);
-			path = "objective-c-jwt-simple-master";
-			sourceTree = SOURCE_ROOT;
-		};
-		45180C502278AB1100450AB1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				45180C5F2278AB1100450AB1 /* objective-c-jwt */,
-				45180C612278AB1100450AB1 /* objective-c-jwt-test.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		45180C532278AB1100450AB1 /* objective-c-jwt-test */ = {
-			isa = PBXGroup;
-			children = (
-				45180C542278AB1100450AB1 /* JwtUnitTest.m */,
-				45180C552278AB1100450AB1 /* Info.plist */,
-			);
-			path = "objective-c-jwt-test";
-			sourceTree = "<group>";
-		};
-		45180C572278AB1100450AB1 /* objective-c-jwt */ = {
-			isa = PBXGroup;
-			children = (
-				45180C582278AB1100450AB1 /* Algorithm.h */,
-				45180C592278AB1100450AB1 /* Jwt.h */,
-				45180C5A2278AB1100450AB1 /* Algorithm.m */,
-				45180C5B2278AB1100450AB1 /* Jwt.m */,
-			);
-			path = "objective-c-jwt";
-			sourceTree = "<group>";
-		};
 		45B99E591FB2217E00C940A4 = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +159,7 @@
 				455EAAB321E2A65F00866AA2 /* CustomerService.m */,
 				455EAAB421E2A65F00866AA2 /* CustomerViewController.h */,
 				455EAAAF21E2A65F00866AA2 /* CustomerViewController.m */,
-				45180C4D2278AB1100450AB1 /* objective-c-jwt-simple-master */,
+				45180C6A2285DBAE00450AB1 /* AWSCognitoAuth.framework */,
 			);
 			path = StockManagement;
 			sourceTree = "<group>";
@@ -229,6 +174,7 @@
 				45B99E5E1FB2217E00C940A4 /* Sources */,
 				45B99E5F1FB2217E00C940A4 /* Frameworks */,
 				45B99E601FB2217E00C940A4 /* Resources */,
+				45180C6D2285DE4700450AB1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -265,35 +211,12 @@
 			mainGroup = 45B99E591FB2217E00C940A4;
 			productRefGroup = 45B99E631FB2217E00C940A4 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 45180C502278AB1100450AB1 /* Products */;
-					ProjectRef = 45180C4F2278AB1100450AB1 /* objective-c-jwt.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				45B99E611FB2217E00C940A4 /* StockManagement */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		45180C5F2278AB1100450AB1 /* objective-c-jwt */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = "objective-c-jwt";
-			remoteRef = 45180C5E2278AB1100450AB1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		45180C612278AB1100450AB1 /* objective-c-jwt-test.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "objective-c-jwt-test.xctest";
-			remoteRef = 45180C602278AB1100450AB1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		45B99E601FB2217E00C940A4 /* Resources */ = {
@@ -302,7 +225,6 @@
 			files = (
 				45B99E721FB2217E00C940A4 /* LaunchScreen.storyboard in Resources */,
 				45B99E6F1FB2217E00C940A4 /* Assets.xcassets in Resources */,
-				45180C622278AB1100450AB1 /* LICENSE in Resources */,
 				45B99E6D1FB2217E00C940A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +240,6 @@
 				45B99E891FB2425200C940A4 /* SupplierService.m in Sources */,
 				45B99E941FB3728D00C940A4 /* StockModel.m in Sources */,
 				455EAABD21E3F88000866AA2 /* SignupViewController.m in Sources */,
-				45180C672278AB1100450AB1 /* Algorithm.m in Sources */,
 				455EAAB821E2A66000866AA2 /* CustomerModel.m in Sources */,
 				45B99E751FB2217F00C940A4 /* main.m in Sources */,
 				455EAABA21E2A66000866AA2 /* CustomerData.m in Sources */,
@@ -331,7 +252,6 @@
 				455EAAB721E2A66000866AA2 /* CustomerViewController.m in Sources */,
 				45B99E8C1FB2429600C940A4 /* SupplierData.m in Sources */,
 				45180C4C2278A7F000450AB1 /* AuthService.m in Sources */,
-				45180C682278AB1100450AB1 /* Jwt.m in Sources */,
 				45B99E831FB22D7600C940A4 /* AuthViewController.m in Sources */,
 				45B99E671FB2217E00C940A4 /* AppDelegate.m in Sources */,
 			);
@@ -469,6 +389,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2VCV357LL;
+				FRAMEWORK_SEARCH_PATHS = "~/github/crmmodernization/V6/aws-ios-sdk-2.9.8/frameworks/";
+				HEADER_SEARCH_PATHS = "/Users/grager/github/crmmodernization/V6/aws-ios-sdk-2.9.8/frameworks/AWSCognitoAuth.framework/Headers/";
 				INFOPLIST_FILE = StockManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cast.StockManagement;
@@ -483,6 +405,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K2VCV357LL;
+				FRAMEWORK_SEARCH_PATHS = "~/github/crmmodernization/V6/aws-ios-sdk-2.9.8/frameworks/";
+				HEADER_SEARCH_PATHS = "/Users/grager/github/crmmodernization/V6/aws-ios-sdk-2.9.8/frameworks/AWSCognitoAuth.framework/Headers/";
 				INFOPLIST_FILE = StockManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cast.StockManagement;

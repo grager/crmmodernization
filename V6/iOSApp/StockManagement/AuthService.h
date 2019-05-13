@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class AWSCognitoAuth, AWSCognitoAuthUserSession;
+
 @interface AuthService : NSObject
 {
-    NSString *_currentJwtToken;
 }
 
-@property (strong) NSString *currentJwtToken;
+@property (nonatomic, strong) AWSCognitoAuth * auth;
+@property (nonatomic, strong) AWSCognitoAuthUserSession *session;
+
 
 + (instancetype)sharedInstance;
 
