@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class StockData;
+
 @interface StockModel : NSObject
 {
     NSMutableArray *_stocks;
@@ -18,6 +20,8 @@
 + (instancetype)sharedInstance;
 
 - (void) createStocksFromDictionary:(NSDictionary*)stockAsDictionary;
+- (void) createStockFromDictionary:(NSDictionary*)stockAsDictionary;
+- (void) removeStock:(StockData*)aStockData;
 - (void) cleanUpModel;
 
 @end

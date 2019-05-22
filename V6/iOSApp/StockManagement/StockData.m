@@ -16,9 +16,16 @@
     
     newOne.name = aDictionary[@"name"];
     newOne.number = aDictionary[@"number"];
+    newOne.uniqueId = aDictionary[@"uniqueId"];
 
     return newOne;
 }
 
+- (NSDictionary*)dictionaryRepresentation
+{
+    return @{@"name":self.name ,
+             @"number":self.number ,
+             @"id":self.uniqueId};
+}
 
 @end

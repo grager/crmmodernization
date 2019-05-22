@@ -39,6 +39,36 @@
     }
 }
 
+- (void) createCustomerFromDictionary:(NSDictionary*)CustomerAsDictionary
+{
+    if(![CustomerAsDictionary[@"status"] isEqualToString:@"error"])
+    {
+        if(!self.customers)
+            self.customers = [NSMutableArray array];
+        
+        [self.customers addObject:[CustomerData newWithDictionary:CustomerAsDictionary[@"customer"]]];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"CustomerModelUpdated" object:self];
+    }
+}
+
+- (void) updateCustomer:(CustomerData *)aCustomerData
+{
+    if(aCustomerData)
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"CustomerModelUpdated" object:self];
+    }
+}
+
+- (void) removeCustomer:(CustomerData*)aCustomerData
+{
+    if(aCustomerData)
+    {
+        [self.customers removeObject:aCustomerData];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"CustomerModelUpdated" object:self];
+    }
+}
+
 - (void) cleanUpModel
 {
     [self.customers removeAllObjects];

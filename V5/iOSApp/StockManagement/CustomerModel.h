@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class CustomerData;
+
 @interface CustomerModel : NSObject
 {
     NSMutableArray *_customers;
@@ -18,6 +20,8 @@
 + (instancetype)sharedInstance;
 
 - (void) createCustomersFromDictionary:(NSDictionary*)CustomerAsDictionary;
+- (void) updateCustomer:(CustomerData*)aCustomerData;
+- (void) removeCustomer:(CustomerData*)aCustomerData;
 - (void) cleanUpModel;
 
 @end

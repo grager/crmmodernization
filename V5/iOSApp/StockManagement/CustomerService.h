@@ -14,5 +14,8 @@
 + (instancetype)sharedInstance;
 - (void) getAllCustomers;
 - (void) getAllPurchasesForCustomer:(CustomerData*)aCustomerData;
+- (void) newCustomer:(CustomerData*)aCustomerData;
+- (void) updateCustomer:(CustomerData*)aCustomerData;
+- (void) deleteCustomer:(CustomerData*)aCustomerData;
 
 @end

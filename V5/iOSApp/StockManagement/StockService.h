@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class StockData;
+
 @interface StockService : NSObject
 
 + (instancetype)sharedInstance;
 - (void) getAllStocks;
+- (void) getStockWithId:(NSString*)anId;
+- (void) newStock:(StockData*)aStockData;
+- (void) deleteStock:(StockData*)aStockData;
 
 @end
