@@ -1,2 +1,3 @@
 # CRM modernization
-Starting from a Stock management application, we are following the modernization of the core mainframe application by introducing an iOS application connected to the system thanks to a Spring MVC layer (Mobile to Mainframe)
+
+CRM Modernization is a demo application used to show how a "legacy" mainframe application doing Stock Management could be modernized to expose and include new features.
