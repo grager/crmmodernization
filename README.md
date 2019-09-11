@@ -1,3 +1,14 @@
-# CRM modernization
+# CRM Modernization - V3
 
-CRM Modernization is a demo application used to show how a "legacy" mainframe application doing Stock Management could be modernized to expose and include new features.
+## Application Status
+
+A new Customer service has been created to replace the legacy one. Now the iOS application will also call the customer services to get the information.
+
+## Application architecture
+
+Introducing new customers management application rewritten from scratch using MEAN stack. Some services will be accessed by iOS application
+
+## Development Process
+
+Team has integrated new functionalities but have not improved the architecture of the API requests for mainframe
+
