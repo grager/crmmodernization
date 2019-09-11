@@ -1,3 +1,13 @@
-# CRM modernization
+# CRM Modernization - V2
 
-CRM Modernization is a demo application used to show how a "legacy" mainframe application doing Stock Management could be modernized to expose and include new features.
+## Application Status
+
+New API have been added on top of the Mainframe app and managed by the iOS application
+
+## Application Architecture
+
+Nothing new
+
+## Development Process
+
+Team has started reviewing results from CAST Dashboard and have improved iOS application.
