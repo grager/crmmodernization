@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "express": "~3.5.0",
-    "mongoose": "~3.6.13",
+    "mongoose": "~5.7.8",
     "lodash": "*",
     "socket.io": "~1.0.6"
   },
