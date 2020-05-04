@@ -5,7 +5,9 @@ var purchaseSchema = mongoose.Schema({
 		type: String,
 		ref: 'Customer'
 	},
-	type: String
+	type: String,
+	date: Number,
+	description: String,
 });
 
 module.exports = mongoose.model('Purchase', purchaseSchema);

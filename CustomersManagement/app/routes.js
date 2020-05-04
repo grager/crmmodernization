@@ -1,6 +1,7 @@
 
 var Customer = require('./models/customer');
 var Purchase = require('./models/purchase');
+var Invoice = require('./models/invoice');
 
 var urlPrefix = '/api';
 
@@ -62,6 +63,19 @@ module.exports = function(app,_){
 			.exec(function(err, purchases){
 			if(err) return console.error(err);
 				res.json(purchases);
+		})
+	})
+
+	//find all invoices for a given customer as a private API
+	app.get(urlPrefix+'/customers/:id/private/invoices', function(req,res){
+		//If customer had an array of invoices refs we could just use populate on the customer.invoices ref
+		//Its safer to do a find of all invoices with the customer_id
+		Invoice
+			.find({_customer: req.params.id})
+			.populate('_customer')
+			.exec(function(err, invoices){
+			if(err) return console.error(err);
+				res.json(invoices);
 		})
 	})
 
@@ -139,6 +153,32 @@ module.exports = function(app,_){
 		})
 	})
 
+//////////////////////////////
+//Invoices
+
+	//get all invoices
+		app.get(urlPrefix+'/invoices', function(req,res){
+			Invoice
+				.find()
+				.populate('_invoice')
+				.exec(function(err, invoices){
+					if(err) return console.error(err);
+						res.json(invoices);
+				})
+		})
+
+		//create an purchase
+		app.post(urlPrefix+'/invoices', function(req,res){
+			var createInvoice = new Invoice({
+				_customer: req.body.customer_id,
+				type: req.body.type
+			});
+			createInvoice.save(function(err, invoices){
+				if(err) return console.error(err);
+
+				res.json(createInvoice);
+			})
+		})
 
 //////////////////////////////
 //static routes
