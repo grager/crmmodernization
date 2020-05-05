@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CRM</string>
+    <string name="calendar">Calendar</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="save">Save</string>
+    <string name="fieldvalue">FieldValue</string>
+    <string name="spinner">FieldSpinner</string>
+    <string name="mandatory">Mandatory</string>
+</resources>

@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:background="@color/gray"
+        android:fontFamily="@font/roboto_slab"
+        android:paddingStart="@dimen/fab_margin"
+        android:paddingTop="@dimen/fab_margin_quarter"
+        android:paddingEnd="@dimen/fab_margin_half"
+        android:paddingBottom="@dimen/fab_margin_quarter"
+        android:textSize="@dimen/textSize18"
+        tools:text="@string/app_name" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/roboto_slab"
+                android:paddingStart="@dimen/fab_margin"
+                android:paddingTop="@dimen/fab_margin_quarter"
+                android:paddingEnd="@dimen/fab_margin_half"
+                android:paddingBottom="@dimen/fab_margin_quarter"
+                android:singleLine="true"
+                tools:text="@string/app_name" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/calendarIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:contentDescription="@string/calendar"
+            android:src="@drawable/ic_calendar"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
