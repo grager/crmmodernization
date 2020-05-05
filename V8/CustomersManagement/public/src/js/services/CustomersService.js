@@ -10,8 +10,8 @@ angular.module('CustomersService', []).service('CustomersService', ['$rootScope'
 				$rootScope.$broadcast('customerList.change', customers);
 			})
 		},
-		getCustomersWithUncheckedPurchase: function(purchase_id) {
-			Restangular.one("private/purchase",purchase_id).get().then(function(customers){
+		getCustomersWithUncheckedPurchase: function() {
+			Restangular.one("private/purchases").get().then(function(customers){
 				$rootScope.$broadcast('customerList.change', customers);
 			})
 		},

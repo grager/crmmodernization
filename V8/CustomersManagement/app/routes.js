@@ -67,7 +67,7 @@ module.exports = function(app,_){
 	})
 
 	//find all purchases for a given customer
-	app.get(urlPrefix+'/customers/:id/private/purchases', function(req,res){
+	app.get(urlPrefix+'/customers/:id/private/purchases/', function(req,res){
 		//If customer had an array of purchase refs we could just use populate on the customer.purchases ref
 		//But that gives us a second set of reference pointers that could get out of sync if there was a change between customers and purchases
 		//Its safer to do a find of all purchases with the customer_id
