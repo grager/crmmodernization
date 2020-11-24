@@ -46,7 +46,7 @@
         // calling the authentication service signup
         
         NSString *baseURL = @"https://castapis/";
-        NSURL *signupURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"/auth"]];
+        NSURL *signupURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"auth"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:signupURL];
@@ -93,6 +93,64 @@
         [signinTask resume];
     }
 }
+
+- (IBAction)resetPasswordActivated:(id)sender
+{
+    NSString *userAsString = [userTextField text];
+    
+    if(![userAsString isEqualToString:@""])
+    {
+        // calling the authentication service signup
+        
+        NSString *baseURL = @"https://castapis/";
+        NSURL *resetPwdURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"auth/resetpassword"]];
+        
+        //Structuring the URL request
+        NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:resetPwdURL];
+        [urlRequest setHTTPMethod:@"POST"];
+        [urlRequest setHTTPBody:[NSJSONSerialization dataWithJSONObject:@{@"user":userAsString} options:NSJSONWritingPrettyPrinted error:nil]];
+        
+        // Start NSURLSession
+        NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+        
+        
+        NSURLSessionDataTask *resetTask =[defaultSession dataTaskWithRequest:urlRequest
+                                                            completionHandler:^(NSData *data,
+                                                                                NSURLResponse *response,
+                                                                                NSError *error){
+                                                                
+                                                                // Handle response
+                                                                NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+                                                                NSInteger statusCode = [httpResponse statusCode];
+                                                                if(error == nil)
+                                                                {
+                                                                    if (statusCode == 200)
+                                                                    {
+                                                                        NSLog (@"statuscode 200");
+                                                                        
+                                                                        [[NSNotificationCenter defaultCenter] postNotificationName:@"ResetPasswordCompleted" object:nil];
+                                                                        
+                                                                        [self presentViewController:[ViewController sharedInstance] animated:YES completion:^{
+                                                                            
+                                                                        }];
+                                                                    }
+                                                                    else if (statusCode == 400)
+                                                                    {
+                                                                        NSLog (@"statuscode 400");
+                                                                        
+                                                                        [self _displaySomethingWentWrong];
+                                                                        
+
+                                                                    }
+                                                                }
+                                                                
+                                                            }];
+        
+        [resetTask resume];
+    }
+}
+
 
 - (IBAction)gotoSignupActivated:(id)sender
 {

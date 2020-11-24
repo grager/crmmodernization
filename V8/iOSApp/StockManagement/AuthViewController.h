@@ -21,6 +21,7 @@
 }
 
 - (IBAction)loginActivated:(id)sender;
+- (IBAction)resetPasswordActivated:(id)sender;
 - (IBAction)gotoSignupActivated:(id)sender;
 
 @end
