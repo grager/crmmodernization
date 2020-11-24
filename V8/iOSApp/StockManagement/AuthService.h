@@ -8,15 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class AWSCognitoAuth, AWSCognitoAuthUserSession;
-
 @interface AuthService : NSObject
 {
 }
-
-@property (nonatomic, strong) AWSCognitoAuth * auth;
-@property (nonatomic, strong) AWSCognitoAuthUserSession *session;
-
 
 + (instancetype)sharedInstance;
 

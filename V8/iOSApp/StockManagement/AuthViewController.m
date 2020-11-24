@@ -45,8 +45,8 @@
     {
         // calling the authentication service signup
         
-        NSString *baseURL = @"http://authentication";
-        NSURL *signupURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"/users/signin"]];
+        NSString *baseURL = @"https://castapis/";
+        NSURL *signupURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"/auth"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:signupURL];

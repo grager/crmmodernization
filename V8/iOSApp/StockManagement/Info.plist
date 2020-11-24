@@ -2,29 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AWS</key>
-	<dict>
-		<key>CognitoUserPool</key>
-		<dict>
-			<key>Default</key>
-			<dict>
-				<key>CognitoAuthScopes</key>
-				<array>
-					<string>openid</string>
-				</array>
-				<key>CognitoAuthSignInRedirectUri</key>
-				<string>myapp://SETME</string>
-				<key>CognitoAuthSignOutRedirectUri</key>
-				<string>myapp://SETME</string>
-				<key>CognitoAuthWebDomain</key>
-                <string>https://SETME</string>
-				<key>CognitoUserPoolAppClientId</key>
-				<string>SETME</string>
-				<key>CognitoUserPoolAppClientSecret</key>
-				<string>SETME or Remove key if App client has no secret</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

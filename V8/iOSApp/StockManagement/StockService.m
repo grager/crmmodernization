@@ -12,7 +12,7 @@
 
 #import "AuthService.h"
 
-static NSString *baseURL = @"http://mystockmanagement.com/";
+static NSString *baseURL = @"https://castapis/";
 
 
 @implementation StockService
@@ -32,7 +32,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"rest/commarea/getPart"]];
+        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"stocks"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:suppliersURL];
@@ -80,7 +80,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,@"rest/commarea/getPart/",anId]];
+        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,@"stock/",anId]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:suppliersURL];
@@ -128,7 +128,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"rest/commarea/setPart"]];
+        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"stock/"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:suppliersURL];
@@ -177,7 +177,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,@"rest/commarea/deletePart/",aStockData.uniqueId]];
+        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,@"stocks/",aStockData.uniqueId]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:suppliersURL];

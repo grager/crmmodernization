@@ -10,7 +10,7 @@
 #import "CustomerModel.h"
 #import "AuthService.h"
 
-static NSString *baseURL = @"http://mystockmanagement.com/";
+static NSString *baseURL = @"https://castapis/";
 
 @implementation CustomerService
 
@@ -29,7 +29,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"api/customers"]];
+        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"customers"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:CustomersURL];
@@ -75,7 +75,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 
 - (void) getAllPurchasesForCustomer:(CustomerData*)aCustomerData
 {
-    NSString *urlAsString = [baseURL stringByAppendingString:@"api/customers/"];
+    NSString *urlAsString = [baseURL stringByAppendingString:@"customers/"];
     urlAsString = [urlAsString stringByAppendingString:aCustomerData.customerId];
     urlAsString = [urlAsString stringByAppendingString:@"/purchases"];
 
@@ -126,7 +126,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"api/customers"]];
+        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"customers"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:CustomersURL];
@@ -176,7 +176,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
     // FIXME: authentication must be activated before updating the customer
 //    if([[AuthService sharedInstance] isAuthenticated])
 //    {
-        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,@"api/customers/",aCustomerData.customerId]];
+        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,@"customers/",aCustomerData.customerId]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:CustomersURL];
@@ -228,7 +228,7 @@ static NSString *baseURL = @"http://mystockmanagement.com/";
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"api/customers"]];
+        NSURL *CustomersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"customers"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:CustomersURL];

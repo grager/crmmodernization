@@ -8,13 +8,12 @@
 
 #import "ViewController.h"
 #import "AuthService.h"
-#import "AWSCognitoAuth.h"
 
 @interface ViewController ()
 
 @end
 
-@interface ViewController () <AWSCognitoAuthDelegate>
+@interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *signInButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *signOutButton;
 @property (nonatomic) BOOL firstLoad;
@@ -36,11 +35,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [AuthService sharedInstance].auth = [AWSCognitoAuth defaultCognitoAuth];
-    if([[AuthService sharedInstance].auth.authConfiguration.appClientId containsString:@"SETME"]){
-        [self alertWithTitle:@"Error" message:@"Info.plist missing necessary config under AWS->CognitoUserPool->Default"];
-    }
-    [AuthService sharedInstance].auth.delegate = self;
     self.firstLoad = YES;
     
 }
@@ -64,7 +58,7 @@
 }
 
 - (IBAction)signInTapped:(UIBarButtonItem *)sender {
-    [[AuthService sharedInstance].auth getSession:self completion:^(AWSCognitoAuthUserSession * _Nullable session, NSError * _Nullable error) {
+    /*[[AuthService sharedInstance].auth getSession:self completion:^(AWSCognitoAuthUserSession * _Nullable session, NSError * _Nullable error) {
         if(error){
             [self alertWithTitle:@"Error" message:error.userInfo[@"error"]];
             [AuthService sharedInstance].session = nil;
@@ -72,16 +66,17 @@
             [AuthService sharedInstance].session = session;
         }
         [self refresh];
-    }];
+    }];*/
 }
 
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if([AuthService sharedInstance].session){
+    /*if([AuthService sharedInstance].session){
         return [self getBestToken].claims.count;
     }
+    return 0;*/
     return 0;
 }
 /*
@@ -94,16 +89,16 @@
 }*/
 
 -(void) refresh {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    /*dispatch_async(dispatch_get_main_queue(), ^{
         self.signInButton.enabled = ![AuthService sharedInstance].session;
         self.signOutButton.enabled = [AuthService sharedInstance].session != nil;
         //[self.tableView reloadData];
         self.title = [AuthService sharedInstance].session.username;
-    });
+    });*/
 }
 
 - (IBAction)signOutTapped:(id)sender {
-    [[AuthService sharedInstance].auth signOut:^(NSError * _Nullable error) {
+    /*[[AuthService sharedInstance].auth signOut:^(NSError * _Nullable error) {
         if(!error){
             [AuthService sharedInstance].session= nil;
             [self alertWithTitle:@"Info" message:@"Session completed"];
@@ -111,12 +106,7 @@
         }else {
             [self alertWithTitle:@"Error" message:error.userInfo[@"error"]];
         }
-    }];
-}
-
-- (nullable AWSCognitoAuthUserSessionToken *) getBestToken {
-    
-    return [AuthService sharedInstance].session.idToken;
+    }];*/
 }
 
 - (void) alertWithTitle: (NSString *) title message:(NSString *)message {

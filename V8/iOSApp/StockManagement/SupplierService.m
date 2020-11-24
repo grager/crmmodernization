@@ -27,8 +27,8 @@
 {
     if([[AuthService sharedInstance] isAuthenticated])
     {
-        NSString *baseURL = @"http://mystockmanagement.com/";
-        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"rest/commarea/getSupplier"]];
+        NSString *baseURL = @"https://castapis/";
+        NSURL *suppliersURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseURL,@"suppliers"]];
         
         //Structuring the URL request
         NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:suppliersURL];

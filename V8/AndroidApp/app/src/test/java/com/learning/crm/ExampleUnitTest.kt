@@ -1,4 +1,4 @@
-package com.learning.crm
+package com.castsoftware.crm
 
 import org.junit.Test
 
