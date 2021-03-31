@@ -1,13 +1,13 @@
-# CRM Modernization - V7
+# CRM Modernization - V8
 
 ## Application Status
 
-New version new services for the Customers Application with used/unsed API
+New version introduced a new Android application written with Kotlin accessing the same API as iOS app
 
 ## Application Architecture
 
-Development added new service but has introduced private API
+An API Gateway using Spring Cloud will be added to avoid accessing back-end from mobile apps
 
 ## Development Process
 
-Some concerns regarding API Management, need to check which API is used
+Some concerns regarding API Management, need to check which API is used, centralized authentication/autorization must be managed

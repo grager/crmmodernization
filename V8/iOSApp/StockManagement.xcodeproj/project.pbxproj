@@ -13,8 +13,6 @@
 		455EAAB921E2A66000866AA2 /* CustomerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EAAB321E2A65F00866AA2 /* CustomerService.m */; };
 		455EAABA21E2A66000866AA2 /* CustomerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EAAB621E2A66000866AA2 /* CustomerData.m */; };
 		455EAABD21E3F88000866AA2 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455EAABC21E3F88000866AA2 /* SignupViewController.m */; };
-		45745A3124621D5400F56284 /* frameworks in Resources */ = {isa = PBXBuildFile; fileRef = 45745A3024621D5300F56284 /* frameworks */; };
-		45745A3324621D9800F56284 /* AWSCognitoAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45180C6A2285DBAE00450AB1 /* AWSCognitoAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45B99E671FB2217E00C940A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B99E661FB2217E00C940A4 /* AppDelegate.m */; };
 		45B99E6A1FB2217E00C940A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B99E691FB2217E00C940A4 /* ViewController.m */; };
 		45B99E6D1FB2217E00C940A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B99E6B1FB2217E00C940A4 /* Main.storyboard */; };
@@ -39,7 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				45745A3324621D9800F56284 /* AWSCognitoAuth.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +46,6 @@
 /* Begin PBXFileReference section */
 		45180C4A2278A7F000450AB1 /* AuthService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthService.h; sourceTree = "<group>"; };
 		45180C4B2278A7F000450AB1 /* AuthService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthService.m; sourceTree = "<group>"; };
-		45180C6A2285DBAE00450AB1 /* AWSCognitoAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoAuth.framework; path = "../aws-ios-sdk-2.13.3/frameworks/AWSCognitoAuth.framework"; sourceTree = "<group>"; };
 		455EAAAF21E2A65F00866AA2 /* CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerViewController.m; sourceTree = "<group>"; };
 		455EAAB021E2A65F00866AA2 /* CustomerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerModel.m; sourceTree = "<group>"; };
 		455EAAB121E2A65F00866AA2 /* CustomerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerModel.h; sourceTree = "<group>"; };
@@ -60,7 +56,7 @@
 		455EAAB621E2A66000866AA2 /* CustomerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerData.m; sourceTree = "<group>"; };
 		455EAABB21E3F88000866AA2 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		455EAABC21E3F88000866AA2 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
-		45745A3024621D5300F56284 /* frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = frameworks; path = "aws-ios-sdk-2.13.3/frameworks"; sourceTree = "<group>"; };
+		456C558B256CF9990089EBBF /* API.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = API.md; sourceTree = "<group>"; };
 		45B99E621FB2217E00C940A4 /* StockManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B99E651FB2217E00C940A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		45B99E661FB2217E00C940A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,7 +101,6 @@
 		450216712460566C0087F4E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				45745A3024621D5300F56284 /* frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,7 +164,7 @@
 				455EAAB321E2A65F00866AA2 /* CustomerService.m */,
 				455EAAB421E2A65F00866AA2 /* CustomerViewController.h */,
 				455EAAAF21E2A65F00866AA2 /* CustomerViewController.m */,
-				45180C6A2285DBAE00450AB1 /* AWSCognitoAuth.framework */,
+				456C558B256CF9990089EBBF /* API.md */,
 			);
 			path = StockManagement;
 			sourceTree = "<group>";
@@ -185,7 +180,6 @@
 				45B99E5F1FB2217E00C940A4 /* Frameworks */,
 				45B99E601FB2217E00C940A4 /* Resources */,
 				450216F6246056BE0087F4E3 /* Embed Frameworks */,
-				450216F72460570C0087F4E3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -237,31 +231,10 @@
 				45B99E721FB2217E00C940A4 /* LaunchScreen.storyboard in Resources */,
 				45B99E6F1FB2217E00C940A4 /* Assets.xcassets in Resources */,
 				45B99E6D1FB2217E00C940A4 /* Main.storyboard in Resources */,
-				45745A3124621D5400F56284 /* frameworks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		450216F72460570C0087F4E3 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "Shell /bin/sh\n\nbash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework/strip-frameworks.sh\"\n\nShow environment variables in build log: Checked\nRun script only when installing: Not checked\n\nInput Files: Empty\nOutput Files: Empty\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45B99E5E1FB2217E00C940A4 /* Sources */ = {

@@ -22,35 +22,35 @@
             app:title="@string/add_contact"
             app:titleTextColor="@color/white" />
 
-        <com.learning.crm.customviews.FormPairView
+        <com.castsoftware.crm.customviews.FormPairView
             android:id="@+id/firstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="First Name"
             app:type="text" />
 
-        <com.learning.crm.customviews.FormPairView
+        <com.castsoftware.crm.customviews.FormPairView
             android:id="@+id/lastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="Last Name"
             app:type="text" />
 
-        <com.learning.crm.customviews.FormPairView
+        <com.castsoftware.crm.customviews.FormPairView
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="Email"
             app:type="email" />
 
-        <com.learning.crm.customviews.FormPairView
+        <com.castsoftware.crm.customviews.FormPairView
             android:id="@+id/mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="Mobile"
             app:type="phone" />
 
-        <com.learning.crm.customviews.FormPairView
+        <com.castsoftware.crm.customviews.FormPairView
             android:id="@+id/dob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

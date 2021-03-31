@@ -17,7 +17,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.learning.crm"
+        applicationId "com.castsoftware.crm"
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
